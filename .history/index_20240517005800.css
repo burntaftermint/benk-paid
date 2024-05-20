@@ -1,0 +1,480 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(#e07441, #fcd24b);
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: myFont;
+    src: url(Jackpot.ttf);
+}
+
+
+.gapfiller {
+    width: 100%;
+    height: 200px;
+    background-color: #ff8d22;
+    position: absolute;
+    top: 0;
+
+    display: none;
+
+}
+
+
+.blueGapIfNeeded {
+    height: 120px;
+    width: 100%;
+    background-color: #f88d2a;
+
+    display: none;
+
+    position: relative;
+}
+
+
+@media only screen and (max-width: 1050px) {
+    .blueGapIfNeeded {
+        display: block;
+    }
+    .gapfiller {
+        display: block;
+    }
+  
+}
+
+
+header {
+    position: absolute;
+    top: 7%;
+    width: 100%;
+    z-index: 1;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 0 0 0;
+}
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+    header {
+        padding: 1rem 0 0 0;
+        gap: 2rem;
+    }
+}
+
+/* @media only screen and (min-width: 700px) and (max-width: 1200px)  {
+    header {
+        top: 4%;
+    }
+} */
+
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 1rem;
+} ul li {
+    line-height: 50%;
+}ul li a {
+    font-size: 4rem;
+    font-family: myFont;
+    color: white;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    ul li a {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+  
+  
+
+.root {
+    width: 100%;
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+img.bg {
+    width: 100%;
+    min-width: 1000px;
+    position: absolute;
+    top: 0;
+}
+
+img.people {
+    width: 100%;
+    min-width: 1000px;
+    position: relative;
+}
+
+.logoWrapper {
+    top: 110px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+
+.logoSect {
+    display: flex;
+    align-items: center;
+    gap: 2rem; 
+}
+
+img.logo {
+    width: 300px;
+}
+.socials {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.socials .social {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #BBBBB9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.social:hover, button:hover {
+    opacity: 0.7;
+    scale: 1.05;
+}
+
+.social img {
+    width: 110%;
+    height: 110%;
+    border-radius: 100%;
+}
+
+
+@media only screen and (min-width: 1300px) {
+    img.bg {
+        top: -3%;
+    }
+}
+
+
+
+
+
+.sect {
+    width: 100%;
+    display: flex;
+    padding: 0 10%;
+
+}   
+.sect .left {
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sect .left img {
+    max-width: 300px;
+}
+
+.sect .right {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+.sect .right img.box {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+}
+
+.sect.two .left.one {
+    display: none;
+}
+
+
+.right .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 5rem 4rem;
+}
+
+
+.content h1 {
+    font-family: myFont;
+    font-size: 3rem;
+    color: white;
+}
+
+
+.content p {
+    font-family: myFont;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+.content.buy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+
+.content button.buy {
+    width: 300px;
+    height: 60px;
+    background-color: #fff;
+    border: 0;
+    border-radius: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+button.buy p {
+    font-family: myFont, Arial, Helvetica, sans-serif;
+    color: #000;
+    
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.buy img {
+    width: 30px;
+    position: absolute;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .sect {
+        flex-direction: column;
+    }   
+
+    .sect .left {
+        width: 100%;
+    }
+    .sect .left img {
+        width: 300px;
+    }   
+    .sect .right {
+        width: 100%;
+    }
+
+    .sect.two .left.one {
+        display: flex;
+    }
+    .sect.two .left.two {
+        display: none;
+    }
+
+
+    /* moving images down to under box */
+
+    .sect.one .left img {
+        transform: translate(0, 80px);
+        z-index: 1;
+    }   
+
+    .sect.two .left.one img {
+        transform: scaleX(-1) translate(0, 30px);
+    }  
+
+    .sect.three .left img {
+        transform: translate(0, 30px);
+    }  
+
+}
+
+@media only screen and (max-width: 700px) {
+    .sect .left img {
+        width: 300px;
+    }   
+
+    
+}
+
+.mobileBox {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .desktopBox {
+        display: none;
+    }
+    .mobileBox {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1300px){
+    .desktopBox {
+        display: none;
+    }
+    .mobileBox {
+        display: flex;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .sect .right {
+        width: 100%;
+    }
+
+
+    .right .content {
+        padding: 3rem 4rem;
+
+    }
+
+    .content h1 {
+        font-family: 'cat';
+        font-size: 2rem;
+        color: white;
+    }
+    .content p {
+        font-family: 'cat';
+        font-size: 1rem;
+        color: white;
+    }
+
+    .sect .left img {
+        width: 230px;
+    }   
+
+       /* moving images down to under box */
+
+       .sect.one .left img {
+        transform: translate(0, 60px);
+        z-index: 1;
+        }   
+    
+}
+
+
+@media only screen and (max-width: 300px) {
+    .right .content {
+        padding: 3rem 1.5rem;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .sect .left img{
+        width: 75%;
+    }
+
+    .content button.buy {
+        width: 200px;
+        height: 40px;
+    }
+
+    button.buy p {
+        font-size: 1.5rem;
+    }
+    
+    button.buy img {
+        width: 20px;
+    }
+
+    .sect.three .right .content {
+        text-align: center;
+        padding: 3rem 4rem;
+    }
+
+
+       /* moving images down to under box */
+
+       .sect.one .left img {
+        transform: translate(0, 55px);
+        z-index: 1;
+        }  
+}
+
+
+
+
+
+
+
+footer {
+    width: 100%;
+    background-color: #ff8d22;
+    margin: 6rem 0 0 0;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    color: white;
+    font-family: myFont, Arial, Helvetica, sans-serif;
+
+    padding: 1.5rem 0;
+
+    flex-wrap: wrap;
+}
+
+footer .socials .social {
+    width: 40px;
+    height: 40px;
+}
